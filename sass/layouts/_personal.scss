@@ -1,11 +1,11 @@
-.personal_container {
+.personal__container {
   background-color: var(--personal-back-color);
 }
-.personal_list {
+.card-list {
   display: flex;
   column-gap: 30px;
 }
-.personal_item {
+.card-list__item {
   width: calc((100% - 90px) / 4);
   max-width: 100%;
   height: auto;
@@ -15,30 +15,30 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.personal_card {
+.card-list__wrap {
   padding: 30px 0;
 }
-.personal_name {
+.card-list__name {
   margin-bottom: 10px;
   text-align: center;
   @include font(500, 16px, 1.18, null);
   color: var(--text-link-color);
 }
-.personal_text {
+.card-list__text {
   text-align: center;
   @include font(null, 16px, 1.18, null);
 
   margin-bottom: 16px;
 }
-.personal_title {
+.personal__title {
   margin-bottom: 50px;
 }
-.personal_soc {
+.media {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.personal_link {
+.media__link {
   @extend %flex;
   width: 44px;
   height: 44px;
@@ -54,7 +54,7 @@
     color: var(--btn-white-color);
   }
 }
-.personal_icon {
+.media__icon {
   fill: currentColor;
   width: 20px;
   height: 20px;

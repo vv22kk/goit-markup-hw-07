@@ -1,12 +1,12 @@
-.navigation_list {
+.navigation__list {
   display: flex;
   align-items: center;
 }
-.navigation_list,
-.navigation_item + .navigation_item {
+.navigation__list,
+.navigation__item + .navigation__item {
   margin-left: 50px;
 }
-.header_logo {
+.header__logo {
   display: inline;
   margin-right: 93px;
   color: var(--logo-black-color);
@@ -19,7 +19,7 @@
   @include font(700, 26px, 1.19, null);
 }
 
-.header_container {
+.header__container {
   display: flex;
   align-items: center;
   @include font(700, 14px, 1.14, 0.02em);
@@ -32,7 +32,7 @@
   }
 }
 
-.navigation_link {
+.navigation__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -40,12 +40,12 @@
 
   color: var(--header-link-color);
 }
-.header_connect {
+.header__connect {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.connect .connect_contact + .connect_contact {
+.connect .connect__contact + .connect__contact {
   margin-left: 50px;
 }
 .accent:hover,
@@ -53,12 +53,12 @@
   color: var(--accent-blue-color);
 }
 
-.connect_mail,
-.connect_tel {
+.connect__mail,
+.connect__tel {
   color: var(--main-body-color);
 }
 .icon,
-.header_logo {
+.header__logo {
   margin-right: 10px;
   fill: currentColor;
 }

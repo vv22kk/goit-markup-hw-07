@@ -1,20 +1,20 @@
 .inform {
   padding-top: 0;
 }
-.inform_list {
+.inform__list {
   display: flex;
   column-gap: 30px;
 }
-.inform_item {
+.inform__item {
   width: calc((100% - 60px) / 3);
 }
-.inform_title {
+.inform__title {
   margin-bottom: 50px;
 }
-.inform_img-thumb {
+.inform__img-thumb {
   position: relative;
 }
-.inform_text {
+.inform__text {
   position: absolute;
   @extend %flex;
   bottom: 0;
