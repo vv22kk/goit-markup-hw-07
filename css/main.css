@@ -624,7 +624,7 @@ body {
   height: 60px;
 }
 
-.footer_container {
+.footer-container {
   display: flex;
   align-items: baseline;
 }
