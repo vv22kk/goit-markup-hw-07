@@ -1,8 +1,8 @@
-.benefits-list {
+.benefits_list {
   display: flex;
   column-gap: 30px;
 }
-.benefits-img {
+.benefits_img {
   @extend %flex;
   gap: 30px;
 
@@ -12,15 +12,15 @@
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.benefits-item {
+.benefits_item {
   width: calc((100% - 90px) / 4);
 }
-.benefits-pre-text {
+.benefits_pre-text {
   margin-bottom: 10px;
   @include font(700, 14px, 1.14, null);
   color: var(--text-link-color);
   text-transform: uppercase;
 }
-.benefits-text {
+.benefits_text {
   line-height: 1.71;
 }

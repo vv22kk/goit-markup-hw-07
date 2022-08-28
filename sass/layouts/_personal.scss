@@ -1,11 +1,11 @@
-.personal {
+.personal_container {
   background-color: var(--personal-back-color);
 }
-.personal-list {
+.personal_list {
   display: flex;
   column-gap: 30px;
 }
-.personal-item {
+.personal_item {
   width: calc((100% - 90px) / 4);
   max-width: 100%;
   height: auto;
@@ -15,29 +15,30 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.card-team {
+.personal_card {
   padding: 30px 0;
 }
-.personal-name {
+.personal_name {
   margin-bottom: 10px;
   text-align: center;
   @include font(500, 16px, 1.18, null);
   color: var(--text-link-color);
 }
-.personal-text {
+.personal_text {
   text-align: center;
   @include font(null, 16px, 1.18, null);
+
   margin-bottom: 16px;
 }
-.personal-title {
+.personal_title {
   margin-bottom: 50px;
 }
-.personal-soc {
+.personal_soc {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.personal-soc-link {
+.personal_link {
   @extend %flex;
   width: 44px;
   height: 44px;
@@ -53,7 +54,7 @@
     color: var(--btn-white-color);
   }
 }
-.personal-soc-icon {
+.personal_icon {
   fill: currentColor;
   width: 20px;
   height: 20px;
