@@ -12,17 +12,21 @@
 /* .porfolio-list-button > .porfolio-item:not(:last-child) {
   margin-right: 8px;
 } */
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 .portfolio-item-after {
   width: calc((100% - 60px) / 3);
@@ -48,7 +52,7 @@
   border-radius: 4px;
   border: 0;
   cursor: pointer;
-  @include font(500, 16px, 1.62, null);
+  @include font(500, 16px, 1.62, 0.03em);
   background-color: var(--portfolio-btn-background-color);
   color: var(--portfolio-btn-txt-color);
   transition-property: color, box-shadow, background-color;
@@ -88,10 +92,15 @@
   background: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   .portfolio-thumb:hover & {
     transform: translateY(0%);
   }
+}
+.portfolio-link:hover .porfolio-overlay,
+.portfolio-link:focus .porfolio-overlay {
+  transform: translateY(0%);
 }

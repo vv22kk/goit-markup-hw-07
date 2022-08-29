@@ -366,7 +366,11 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  font-weight: 700;
+  justify-content: center;
+}
+
+.header__text {
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -374,9 +378,8 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__container_container {
-  display: flex;
-  align-items: center;
+.header__text:hover, .header__text:focus {
+  color: var(--accent-blue-color);
 }
 
 .navigation__link {
@@ -390,16 +393,20 @@ body {
 .header__connect {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: auto;
+}
+
+.connect__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .connect .connect__contact + .connect__contact {
   margin-left: 50px;
-}
-
-.accent:hover,
-.accent:focus {
-  color: var(--accent-blue-color);
 }
 
 .connect__mail,
@@ -426,6 +433,10 @@ body {
   height: 4px;
   border-radius: 2px;
   background: var(--accent-blue-color);
+}
+
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
 }
 
 .hero__container {
@@ -649,8 +660,11 @@ body {
 }
 
 .contact-item:not(:last-child) {
-  font-style: normal;
   margin-bottom: 9px;
+}
+
+.contact-item {
+  font-style: normal;
 }
 
 .contact {
@@ -780,8 +794,13 @@ body {
   gap: 30px;
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio-link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-link:hover, .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -818,6 +837,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   background-color: var(--portfolio-btn-background-color);
   color: var(--portfolio-btn-txt-color);
   transition-property: color, box-shadow, background-color;
@@ -853,9 +873,15 @@ body {
   color: var(--btn-white-color);
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-thumb:hover .porfolio-overlay {
+  transform: translateY(0%);
+}
+
+.portfolio-link:hover .porfolio-overlay,
+.portfolio-link:focus .porfolio-overlay {
   transform: translateY(0%);
 }/*# sourceMappingURL=main.css.map */

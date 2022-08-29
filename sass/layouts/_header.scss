@@ -22,13 +22,17 @@
 .header__container {
   display: flex;
   align-items: center;
-  @include font(700, 14px, 1.14, 0.02em);
+  justify-content: center;
+}
+
+.header__text {
+  @include font(500, 14px, 1.14, 0.02em);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &_container {
-    display: flex;
-    align-items: center;
+  &:hover,
+  &:focus {
+    color: var(--accent-blue-color);
   }
 }
 
@@ -43,16 +47,19 @@
 .header__connect {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: auto;
+}
+.connect__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .connect .connect__contact + .connect__contact {
   margin-left: 50px;
 }
-.accent:hover,
-.accent:focus {
-  color: var(--accent-blue-color);
-}
-
 .connect__mail,
 .connect__tel {
   color: var(--main-body-color);
@@ -76,4 +83,7 @@
     border-radius: 2px;
     background: var(--accent-blue-color);
   }
+}
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
 }
